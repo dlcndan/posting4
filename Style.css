@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#page {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#content {
+            min-height: 300px;
+        }
+        #introduction img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+#mail {
+            color: brown;
+            text-decoration: underline;
+            display: block;
+            margin-top: 20px;
+        }
+#mail:hover{
+    color: burlywood
+
+}
+#introduction {
+            margin-top: 30px;
+        }
+
+
+#intro:hover{
+            background-color: antiquewhite;
+        }
+#report:hover{
+            background-color: antiquewhite;
+        }
+#blank:hover{
+            background-color: antiquewhite;
+        }
+
+        .cpy{
+            padding-left: 20px;
+        }
+        .title{
+            color: tomato;
+        }
+        .down::before {
+            content: "📁";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .down{
+            position: relative;
+            padding-left: 25px;
+            margin-bottom:40px;
+        }
+        ul{
+            margin-top: 20px;
+        }
+        .listing{
+            border-bottom: 30px;
+        }
+        .watermark{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            opacity: 0.2;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            pointer-events: none; /* 클릭 방지 */
+            z-index: 9999;
+        }
+
+ @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        nav a {
+            font-size: 1rem;
+        }
+
+        .cpy {
+            font-size: 0.95rem;
+        }
+
+        .title {
+            font-size: 1rem;
+        }
+
+        .down a {
+            font-size: 0.9rem;
+        }
+    }
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>202411325 | LEE CHOONGMOO</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        nav {
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            cursor: pointer;
+            text-decoration: underline;
+            color: thistle;
+        }  
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1>CHOONGMOO LEE</h1>
+        
+        <nav id="navi">
+            <a data-page="introduction" id="intro">Introduction</a>
+            <a data-page="subpage1" id="report">Project Report</a>
+            <a data-page="subpage2" id="blank">recommend site</a>
+        </nav>
+        <hr>
+        <div id="content">
+            <div id="introduction" class="page">
+                <h3>Introduction</h3>
+                <br>
+                <img src="poto.jpg" alt="profile" width="200px">
+                <p>Hello, my name is Choongmoo LEE. I am from Nowon-gu, Seoul.</p>
+                <p>I graduacted form elementary school, middle school, high school</p>
+                <p>fom Nowon-gu. I am currently studying computer science at </p>
+                <p>Kangwon National University. I am in the second year in my studies</p>
+                <p>Currently, I live by myself about 5 minutes away from school for </p>
+                <p>my studies.</p>
+                <br><br><br><br>
+                <a id="mail" href="mailto:leechoongmoo@naver.com">leechoongmoo@naver.com</a>
+                <p class="watermark">202411325 이충무</p>
+                
+            </div>
+
+            <div id="subpage1" class="page" style="display:none">
+                <h3>Project Report</h3>
+                <ul id="list">
+                    <div class="listing">
+                        <li><h4>C project report</h4></li>
+                            <ul class="cpy">
+                                <li class="title"><b>"Menu recommend Program Report"</b><br>  >>Making a menu recommendation program using language C</li>
+                                <li class="down"><a href="menure.pdf" download>menu.pdf</a></li>
+                            </ul>
+
+                    </div>
+                    <br><br><br>
+
+                    <div class="listing">
+
+                    <li><h4>Python Project report</h4></li>
+                        <ul class="cpy">
+                            <li class="title"><b>"Numpy Array Python List Array Performance Comparison Report"</b><br> >>Which one is faster, the Numpy array or the Python list, and why it is analyzed</li>
+                            <li class="down"><a href="nvsp.pdf" download>nvsp.pdf</a></li><br><br>
+                            <li class="title"><b>"Blackjack game program report"</b><br> >>Implementing a blackjack game with Python and writing a report on the role of the program</li>
+                            <li class="down"><a href="blackjack.pdf" download>blackjack.pdf</a></li>
+                        </ul>
+
+                    </div>
+                </ul>
+                <p class="watermark">202411325 이충무</p>
+
+            </div>
+            <div id="subpage2" class="page" style="display:none;">
+                <ul>
+                    <li><a href="https://eruri.kangwon.ac.kr/">이루리 사이트</a></li>
+                    <li><a href="https://wwwk.kangwon.ac.kr/www/index.do">강원대학교 홈페이지</a></li>
+                    <li><a href="https://www.dbpia.co.kr/">논문 검색 사이트</a></li>
+                    <li><a href="https://www.acmicpc.net/">백준</a></li>
+                </ul>
+                <p class="watermark">202411325 이충무</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("nav a").click(function(){
+                const page =$(this).data("page");
+                $(".page").hide();
+                $("#"+page).show();
+            });
+
+            $(".page").hide();
+            $("#introduction").show();
+        });
+    </script>
+</body>
+</html>
